@@ -1,14 +1,19 @@
 {
   "name": "n8n-nodes-msgraphsecurity",
   "version": "0.1.0",
-  "description": "",
+  "description": "Integration with Microsoft Graph Security API",
   "license": "MIT",
   "homepage": "",
-  "keywords": ["n8n-community-node-package"],
+  "keywords": [
+    "n8n-community-node-package",
+    "microsoft",
+    "graph",
+    "security"
+  ],
   "author": { "name": "frodehus", "email": "frode.hus@outlook.com" },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/FrodeHus/n8n-nodes-msgraphsecurity.git"
   },
   "scripts": {
     "build": "n8n-node build",
