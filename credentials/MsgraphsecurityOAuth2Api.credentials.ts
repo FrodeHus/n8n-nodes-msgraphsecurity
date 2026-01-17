@@ -1,4 +1,4 @@
-import type { ICredentialType, INodeProperties } from 'n8n-workflow';
+import type { ICredentialTestRequest, ICredentialType, INodeProperties } from 'n8n-workflow';
 
 export class MsgraphsecurityOAuth2Api implements ICredentialType {
 	name = 'msgraphsecurityOAuth2Api';
@@ -8,7 +8,15 @@ export class MsgraphsecurityOAuth2Api implements ICredentialType {
 	displayName = 'Msgraphsecurity OAuth2 API';
 
 	// Link to your community node's README
-	documentationUrl = 'https://github.com/org/-msgraphsecurity?tab=readme-ov-file#credentials';
+	documentationUrl =
+		'https://github.com/FrodeHus/n8n-nodes-msgraphsecurity?tab=readme-ov-file#credentials';
+	test: ICredentialTestRequest = {
+		request: {
+			method: 'GET',
+			baseURL: 'https://graph.microsoft.com/beta/security',
+			url: '/secureScores',
+		},
+	};
 
 	properties: INodeProperties[] = [
 		{
@@ -20,8 +28,8 @@ export class MsgraphsecurityOAuth2Api implements ICredentialType {
 		{
 			displayName: 'Access Token URL',
 			name: 'accessTokenUrl',
-			type: 'hidden',
-			default: 'https://api.example.com/oauth/token',
+			type: 'string',
+			default: 'https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token',
 		},
 		{
 			displayName: 'Auth URI Query Parameters',
@@ -33,7 +41,7 @@ export class MsgraphsecurityOAuth2Api implements ICredentialType {
 			displayName: 'Scope',
 			name: 'scope',
 			type: 'hidden',
-			default: 'users:read users:write companies:read',
+			default: 'https://graph.microsoft.com/.default',
 		},
 		{
 			displayName: 'Authentication',

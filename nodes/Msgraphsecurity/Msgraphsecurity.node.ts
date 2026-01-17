@@ -1,6 +1,5 @@
 import { NodeConnectionTypes, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
-import { userDescription } from './resources/user';
-import { companyDescription } from './resources/company';
+import { secureScoreDescription } from './resources/secureScore';
 
 export class Msgraphsecurity implements INodeType {
 	description: INodeTypeDescription = {
@@ -33,18 +32,14 @@ export class Msgraphsecurity implements INodeType {
 				noDataExpression: true,
 				options: [
 					{
-						name: 'User',
-						value: 'user',
-					},
-					{
-						name: 'Company',
-						value: 'company',
+						name: 'Secure Score',
+						value: 'secureScore',
+						description: 'Operations on secure scores',
 					},
 				],
-				default: 'user',
+				default: 'secureScore',
 			},
-			...userDescription,
-			...companyDescription,
+			...secureScoreDescription,
 		],
 	};
 }
