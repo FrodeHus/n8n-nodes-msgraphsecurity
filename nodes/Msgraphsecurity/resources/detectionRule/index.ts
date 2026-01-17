@@ -1,6 +1,7 @@
 import { INodeProperties } from 'n8n-workflow';
 import { getOneDetectionRuleDescription } from './getOne';
 import { createDetectionRuleDescription } from './create';
+import { deleteDetectionRuleDescription } from './delete';
 
 const showIfDetectionRuleOperation = {
 	operation: ['detectionRule'],
@@ -52,9 +53,22 @@ export const detectionRuleDescription: INodeProperties[] = [
 					},
 				},
 			},
+			{
+				name: 'Delete',
+				value: 'delete',
+				description: 'Delete a detection rule by ID',
+				action: 'Delete a detection rule',
+				routing: {
+					request: {
+						method: 'DELETE',
+						url: '/security/rules/detectionRules/{{ $parameter.detectionRuleId }}',
+					},
+				},
+			},
 		],
 		default: 'getAll',
 		...getOneDetectionRuleDescription,
 		...createDetectionRuleDescription,
+		...deleteDetectionRuleDescription,
 	},
 ];
