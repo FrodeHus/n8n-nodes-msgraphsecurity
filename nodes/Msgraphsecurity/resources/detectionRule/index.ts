@@ -1,5 +1,6 @@
 import { INodeProperties } from 'n8n-workflow';
 import { getOneDetectionRuleDescription } from './getOne';
+import { createDetectionRuleDescription } from './create';
 
 const showIfDetectionRuleOperation = {
 	operation: ['detectionRule'],
@@ -39,8 +40,21 @@ export const detectionRuleDescription: INodeProperties[] = [
 					},
 				},
 			},
+			{
+				name: 'Create',
+				value: 'create',
+				description: 'Create a new detection rule',
+				action: 'Create a detection rule',
+				routing: {
+					request: {
+						method: 'POST',
+						url: '/security/rules/detectionRules',
+					},
+				},
+			},
 		],
-        default: 'getAll',
-        ...getOneDetectionRuleDescription,
-	}
+		default: 'getAll',
+		...getOneDetectionRuleDescription,
+		...createDetectionRuleDescription,
+	},
 ];
