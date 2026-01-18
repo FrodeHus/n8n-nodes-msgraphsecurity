@@ -54,6 +54,7 @@ export const createDetectionRuleDescription: INodeProperties[] = [
 			send: {
 				type: 'body',
 				property: 'queryCondition.queryText',
+				propertyInDotNotation: true,
 			},
 		},
 	},
@@ -92,6 +93,7 @@ export const createDetectionRuleDescription: INodeProperties[] = [
 			send: {
 				type: 'body',
 				property: 'schedule.period',
+				propertyInDotNotation: true,
 			},
 		},
 	},
