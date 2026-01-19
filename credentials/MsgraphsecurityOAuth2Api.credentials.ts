@@ -5,7 +5,7 @@ export class MsgraphsecurityOAuth2Api implements ICredentialType {
 
 	extends = ['oAuth2Api'];
 
-	displayName = 'Msgraphsecurity OAuth2 API';
+	displayName = 'Microsoft Graph OAuth2 API';
 	icon: Icon = {
 		light: 'file:../icons/msgraph.svg',
 		dark: 'file:../icons/msgraph.dark.svg',

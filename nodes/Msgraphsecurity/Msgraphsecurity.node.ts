@@ -3,7 +3,7 @@ import { secureScoreDescription } from './resources/secureScore';
 
 export class Msgraphsecurity implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Msgraphsecurity',
+		displayName: 'Microsoft Graph Unified Security API',
 		name: 'msgraphsecurity',
 		icon: { light: 'file:../../icons/msgraph.svg', dark: 'file:../../icons/msgraph.dark.svg' },
 		group: ['transform'],
