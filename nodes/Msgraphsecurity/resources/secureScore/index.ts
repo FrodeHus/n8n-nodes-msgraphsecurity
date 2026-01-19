@@ -27,10 +27,10 @@ export const secureScoreDescription: INodeProperties[] = [
                 },
             },
             {
-                name: 'Get All',
+                name: 'Get Many',
                 value: 'getAll',
-                description: 'Get all secure scores',
-                action: 'Get all secure scores',
+                description: 'Get many secure scores',
+                action: 'Get many secure scores',
                 routing: {
                     request: {
                         method: 'GET',

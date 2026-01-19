@@ -15,6 +15,6 @@ export const getOneDetectionRuleDescription: INodeProperties[] = [
             show: showOnlyIfResourceIsDetectionRule,
         },
         default: 0,
-        description: 'The unique identifier of the detection rule.',
+        description: 'The unique identifier of the detection rule',
     },
 ]   

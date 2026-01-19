@@ -15,6 +15,6 @@ export const deleteDetectionRuleDescription: INodeProperties[] = [
             show: showIfDeleteDetectionRule,
         },
         default: 0,
-        description: 'The unique identifier of the detection rule to delete.',
+        description: 'The unique identifier of the detection rule to delete',
     },
 ];

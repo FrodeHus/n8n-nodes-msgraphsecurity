@@ -15,7 +15,7 @@ export const createDetectionRuleDescription: INodeProperties[] = [
 			show: showOnlyIfResourceCreateDetectionRule,
 		},
 		default: '',
-		description: 'The name of the detection rule to create.',
+		description: 'The name of the detection rule to create',
 		routing: {
 			send: {
 				type: 'body',
@@ -32,7 +32,7 @@ export const createDetectionRuleDescription: INodeProperties[] = [
 			show: showOnlyIfResourceCreateDetectionRule,
 		},
 		default: true,
-		description: 'Whether the detection rule is enabled upon creation.',
+		description: 'Whether the detection rule is enabled upon creation',
 		routing: {
 			send: {
 				type: 'body',
@@ -49,7 +49,7 @@ export const createDetectionRuleDescription: INodeProperties[] = [
 			show: showOnlyIfResourceCreateDetectionRule,
 		},
 		default: '',
-		description: 'The query for the detection rule.',
+		description: 'The query for the detection rule',
 		routing: {
 			send: {
 				type: 'body',
@@ -88,7 +88,7 @@ export const createDetectionRuleDescription: INodeProperties[] = [
 			},
 		],
 		default: '1H',
-		description: 'The schedule for the detection rule.',
+		description: 'The schedule for the detection rule',
 		routing: {
 			send: {
 				type: 'body',
@@ -101,12 +101,11 @@ export const createDetectionRuleDescription: INodeProperties[] = [
 		displayName: 'Detection Action',
 		name: 'detectionAction',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: showOnlyIfResourceCreateDetectionRule,
 		},
 		default: '',
-		description: 'The action to take when the detection rule is triggered.',
+		description: 'The action to take when the detection rule is triggered',
 		routing: {
 			send: {
 				type: 'body',
@@ -118,12 +117,11 @@ export const createDetectionRuleDescription: INodeProperties[] = [
 		displayName: 'Response Actions',
 		name: 'responseActions',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: showOnlyIfResourceCreateDetectionRule,
 		},
 		default: '',
-		description: 'The response actions to take when the detection rule is triggered.',
+		description: 'The response actions to take when the detection rule is triggered',
 		routing: {
 			send: {
 				type: 'body',

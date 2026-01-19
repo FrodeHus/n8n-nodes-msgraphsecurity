@@ -30,10 +30,10 @@ export const detectionRuleDescription: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'Get All',
+				name: 'Get Many',
 				value: 'getAll',
-				description: 'Get all detection rules',
-				action: 'Get all detection rules',
+				description: 'Get many detection rules',
+				action: 'Get many detection rules',
 				routing: {
 					request: {
 						method: 'GET',
