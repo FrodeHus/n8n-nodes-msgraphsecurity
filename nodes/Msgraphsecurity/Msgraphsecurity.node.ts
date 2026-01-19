@@ -5,7 +5,7 @@ export class Msgraphsecurity implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Msgraphsecurity',
 		name: 'msgraphsecurity',
-		icon: { light: 'file:msgraphsecurity.svg', dark: 'file:msgraphsecurity.dark.svg' },
+		icon: { light: 'file:../../icons/msgraph.svg', dark: 'file:../../icons/msgraph.dark.svg' },
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',

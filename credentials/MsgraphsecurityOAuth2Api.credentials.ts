@@ -1,4 +1,4 @@
-import type { ICredentialTestRequest, ICredentialType, INodeProperties } from 'n8n-workflow';
+import type { Icon, ICredentialTestRequest, ICredentialType, INodeProperties } from 'n8n-workflow';
 
 export class MsgraphsecurityOAuth2Api implements ICredentialType {
 	name = 'msgraphsecurityOAuth2Api';
@@ -6,7 +6,10 @@ export class MsgraphsecurityOAuth2Api implements ICredentialType {
 	extends = ['oAuth2Api'];
 
 	displayName = 'Msgraphsecurity OAuth2 API';
-
+	icon: Icon = {
+		light: 'file:../icons/msgraph.svg',
+		dark: 'file:../icons/msgraph.dark.svg',
+	};
 	// Link to your community node's README
 	documentationUrl =
 		'https://github.com/FrodeHus/n8n-nodes-msgraphsecurity?tab=readme-ov-file#credentials';
