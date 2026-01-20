@@ -1,5 +1,6 @@
 import { NodeConnectionTypes, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
 import { secureScoreDescription } from './resources/secureScore';
+import { getManySecureScoreDescription } from './resources/secureScore/getMany';
 
 export class Msgraphsecurity implements INodeType {
 	description: INodeTypeDescription = {
@@ -18,7 +19,7 @@ export class Msgraphsecurity implements INodeType {
 		outputs: [NodeConnectionTypes.Main],
 		credentials: [{ name: 'msgraphsecurityOAuth2Api', required: true }],
 		requestDefaults: {
-			baseURL: 'https://graph.microsoft.com/beta/',
+			baseURL: 'https://graph.microsoft.com/beta/security',
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
@@ -40,6 +41,7 @@ export class Msgraphsecurity implements INodeType {
 				default: 'secureScore',
 			},
 			...secureScoreDescription,
+			...getManySecureScoreDescription,
 		],
 	};
 }
