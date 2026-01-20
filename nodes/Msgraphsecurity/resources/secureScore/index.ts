@@ -1,4 +1,5 @@
 import { INodeProperties } from 'n8n-workflow';
+import { getManySecureScoreDescription } from './getMany';
 
 const showOnlyIfOperationIsSecureScore = {
 	resource: ['secureScore'],
@@ -41,4 +42,5 @@ export const secureScoreDescription: INodeProperties[] = [
 		],
 		default: 'get',
 	},
+	...getManySecureScoreDescription,
 ];

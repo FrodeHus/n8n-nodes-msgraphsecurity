@@ -1,6 +1,6 @@
 import { NodeConnectionTypes, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
 import { secureScoreDescription } from './resources/secureScore';
-import { getManySecureScoreDescription } from './resources/secureScore/getMany';
+import { detectionRuleDescription } from './resources/detectionRule';
 
 export class Msgraphsecurity implements INodeType {
 	description: INodeTypeDescription = {
@@ -33,6 +33,11 @@ export class Msgraphsecurity implements INodeType {
 				noDataExpression: true,
 				options: [
 					{
+						name: 'Custom Detection Rule',
+						value: 'customDetectionRule',
+						description: 'Operations on custom detection rules',
+					},
+					{
 						name: 'Secure Score',
 						value: 'secureScore',
 						description: 'Operations on secure scores',
@@ -41,7 +46,7 @@ export class Msgraphsecurity implements INodeType {
 				default: 'secureScore',
 			},
 			...secureScoreDescription,
-			...getManySecureScoreDescription,
+			...detectionRuleDescription,
 		],
 	};
 }

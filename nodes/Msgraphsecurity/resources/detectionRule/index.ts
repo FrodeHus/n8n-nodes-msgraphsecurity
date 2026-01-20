@@ -2,9 +2,10 @@ import { INodeProperties } from 'n8n-workflow';
 import { getOneDetectionRuleDescription } from './getOne';
 import { createDetectionRuleDescription } from './create';
 import { deleteDetectionRuleDescription } from './delete';
+import { getAllDetectionRuleDescription } from './getAll';
 
 const showIfDetectionRuleOperation = {
-	operation: ['detectionRule'],
+	resource: ['customDetectionRule'],
 };
 
 export const detectionRuleDescription: INodeProperties[] = [
@@ -25,7 +26,7 @@ export const detectionRuleDescription: INodeProperties[] = [
 				routing: {
 					request: {
 						method: 'GET',
-						url: '/security/rules/detectionRules/{{ $parameter.detectionRuleId }}',
+						url: '/rules/detectionRules/{{ $parameter.detectionRuleId }}',
 					},
 				},
 			},
@@ -37,7 +38,7 @@ export const detectionRuleDescription: INodeProperties[] = [
 				routing: {
 					request: {
 						method: 'GET',
-						url: '/security/rules/detectionRules',
+						url: '/rules/detectionRules',
 					},
 				},
 			},
@@ -49,7 +50,7 @@ export const detectionRuleDescription: INodeProperties[] = [
 				routing: {
 					request: {
 						method: 'POST',
-						url: '/security/rules/detectionRules',
+						url: '/rules/detectionRules',
 					},
 				},
 			},
@@ -61,14 +62,15 @@ export const detectionRuleDescription: INodeProperties[] = [
 				routing: {
 					request: {
 						method: 'DELETE',
-						url: '/security/rules/detectionRules/{{ $parameter.detectionRuleId }}',
+						url: '/rules/detectionRules/{{ $parameter.detectionRuleId }}',
 					},
 				},
 			},
 		],
 		default: 'getAll',
-		...getOneDetectionRuleDescription,
-		...createDetectionRuleDescription,
-		...deleteDetectionRuleDescription,
 	},
+	...getOneDetectionRuleDescription,
+	...createDetectionRuleDescription,
+	...deleteDetectionRuleDescription,
+	...getAllDetectionRuleDescription,
 ];
