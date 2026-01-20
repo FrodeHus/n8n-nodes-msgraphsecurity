@@ -1,8 +1,16 @@
 # n8n-nodes-msgraphsecurity
 
-This is an n8n community node. It lets you use _app/service name_ in your n8n workflows.
+This is an n8n community node. It lets you use the Unified Security API in Microsoft Graph in your n8n workflows.
 
-_App/service name_ is _one or two sentences describing the service this node integrates with_.
+The Microsoft Graph security API provides a unified interface and schema to integrate with security solutions from Microsoft and ecosystem partners. It empowers customers to streamline security operations and better defend against increasing cyber threats. The Microsoft Graph security API federates queries to all onboarded security providers and aggregates responses. Use the Microsoft Graph security API to build applications that:
+
+- Consolidate and correlate security alerts from multiple sources.
+- Pull and investigate all incidents and alerts from services that are part of or integrated with Microsoft 365 Defender.
+- Unlock contextual data to inform investigations.
+- Automate security tasks, business processes, workflows, and reporting.
+- Send threat indicators to Microsoft products for customized detections.
+- Invoke actions in response to new threats.
+- Provide visibility into security data to enable proactive risk management.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/sustainable-use-license/) workflow automation platform.
 
@@ -41,19 +49,17 @@ Required Microsoft Graph permissions (Type: Application):
 
 ## Compatibility
 
-_State the minimum n8n version, as well as which versions you test against. You can also include any known version incompatibility issues._
+Tested with recent n8n 2.x releases. Older versions may work, but are not guaranteed.
 
 ## Usage
 
-_This is an optional section. Use it to help users with any difficult or confusing aspects of the node._
-
-_By the time users are looking for community nodes, they probably already know n8n basics. But if you expect new users, you can link to the [Try it out](https://docs.n8n.io/try-it-out/) documentation to help them get started._
+[Try it out](https://docs.n8n.io/try-it-out/)
 
 ## Resources
 
 - [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
-- _Link to app/service documentation._
+- [Microsoft Graph security API overview](https://learn.microsoft.com/en-us/graph/api/resources/security-api-overview?view=graph-rest-beta)
 
 ## Version history
 
-_This is another optional section. If your node has multiple versions, include a short description of available versions and what changed, as well as any compatibility impact._
+[Changelog](./CHANGELOG.md)
