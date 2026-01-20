@@ -1,9 +1,9 @@
 import { INodeProperties } from "n8n-workflow";
 
 const showIfDeleteDetectionRule = {
-    operation: ['delete'],
-    resource: ['detectionRule'],
-}
+	operation: ['delete'],
+	resource: ['customDetectionRule'],
+};
 
 export const deleteDetectionRuleDescription: INodeProperties[] = [
     {

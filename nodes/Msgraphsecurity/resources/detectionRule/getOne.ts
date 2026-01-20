@@ -1,9 +1,9 @@
 import { INodeProperties } from "n8n-workflow";
 
-const showOnlyIfResourceIsDetectionRule = { 
-    operation: ['get'],
-    resource: ['detectionRule'],
-}
+const showOnlyIfResourceIsDetectionRule = {
+	operation: ['get'],
+	resource: ['customDetectionRule'],
+};
 
 export const getOneDetectionRuleDescription: INodeProperties[] = [
     {
