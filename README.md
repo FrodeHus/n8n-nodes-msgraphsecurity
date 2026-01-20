@@ -20,11 +20,24 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 
 ## Operations
 
-_List the operations supported by your node._
+- Secure Score
+  - Get Many Secure Score
+- Custom Detection Rule
+  - Get One Detection Rule
+  - Create Detection Rule
+  - Delete Detection Rule
+  - Get All Detection Rule
 
 ## Credentials
 
-_If users need to authenticate with the app/service, provide details here. You should include prerequisites (such as signing up with the service), available authentication methods, and how to set them up._
+Required Microsoft Graph permissions (Type: Application):
+
+- CustomDetection.ReadWrite.All
+- SecurityEvents.Read.All
+- SecurityIncident.ReadWrite.All
+- SecurityEvents.Read.All
+- SecurityActions.ReadWrite.All
+- SecurityAlert.ReadWrite.All
 
 ## Compatibility
 
@@ -38,8 +51,8 @@ _By the time users are looking for community nodes, they probably already know n
 
 ## Resources
 
-* [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
-* _Link to app/service documentation._
+- [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
+- _Link to app/service documentation._
 
 ## Version history
 
