@@ -1,4 +1,4 @@
-import { INodeProperties } from "n8n-workflow";
+import { INodeProperties } from 'n8n-workflow';
 
 const showOnlyIfResourceCreateDetectionRule = {
 	operation: ['create'],
@@ -98,18 +98,58 @@ export const createDetectionRuleDescription: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Detection Action',
-		name: 'detectionAction',
-		type: 'json',
-		displayOptions: {
-			show: showOnlyIfResourceCreateDetectionRule,
-		},
+		displayName: 'Alert Title',
+		name: 'alertTitle',
+		type: 'string',
 		default: '',
-		description: 'The action to take when the detection rule is triggered',
+		description: 'The title of the alert to create',
 		routing: {
 			send: {
 				type: 'body',
-				property: 'detectionAction',
+				property: 'detectionAction.alertTemplate.title',
+				propertyInDotNotation: true,
+			},
+		},
+	},
+	{
+		displayName: 'Alert Description',
+		name: 'alertDescription',
+		type: 'string',
+		default: '',
+		description: 'The description of the alert to create',
+		routing: {
+			send: {
+				type: 'body',
+				property: 'detectionAction.alertTemplate.description',
+				propertyInDotNotation: true,
+			},
+		},
+	},
+	{
+		displayName: 'Alert Severity',
+		name: 'alertSeverity',
+		type: 'options',
+		options: [
+			{
+				name: 'Low',
+				value: 'low',
+			},
+			{
+				name: 'Medium',
+				value: 'medium',
+			},
+			{
+				name: 'High',
+				value: 'high',
+			},
+		],
+		default: 'medium',
+		description: 'The severity of the alert to create',
+		routing: {
+			send: {
+				type: 'body',
+				property: 'detectionAction.alertTemplate.severity',
+				propertyInDotNotation: true,
 			},
 		},
 	},
@@ -129,4 +169,4 @@ export const createDetectionRuleDescription: INodeProperties[] = [
 			},
 		},
 	},
-]; 
+];
